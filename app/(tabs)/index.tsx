@@ -1,10 +1,10 @@
 import { Image } from 'expo-image';
 import { Platform, StyleSheet } from 'react-native';
-
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function HomeScreen() {
   return (
@@ -17,8 +17,9 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
+        <ThemedText type="title" style={styles.wasa}>
+          Hola Mundo!💙💛
+        </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
@@ -60,6 +61,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
+  },
+  wasa: {
+    color: 'blue',
   },
   stepContainer: {
     gap: 8,
